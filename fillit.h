@@ -6,7 +6,7 @@
 /*   By: ckrommen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/04 19:04:53 by ckrommen          #+#    #+#             */
-/*   Updated: 2017/10/05 14:59:55 by ckrommen         ###   ########.fr       */
+/*   Updated: 2017/10/05 19:27:20 by qponcele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,6 @@ typedef struct	piece
 }				piece;
 
 char	*ft_filetoarr(int fd, char *av);
-piece	*ft_newpiece();
-piece	*ft_create(char *arr);
-piece	*ft_build(int fd, char *av);
 int		ft_countpiece(char *arr);
-piece	*ft_fill(char *arr, piece *new);
 
 #endif

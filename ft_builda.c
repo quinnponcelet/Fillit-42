@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fill.c                                          :+:      :+:    :+:   */
+/*   ft_builda.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ckrommen <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: qponcele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/10/05 14:27:47 by ckrommen          #+#    #+#             */
-/*   Updated: 2017/10/05 15:30:17 by ckrommen         ###   ########.fr       */
+/*   Created: 2017/10/05 19:46:29 by qponcele          #+#    #+#             */
+/*   Updated: 2017/10/05 19:57:22 by qponcele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-piece	*ft_fill(char *arr, piece *new)
+char	**ft_builda(int fd, char *av)
 {
-	piece	*ptr;
+	int		i;
 	int		row;
-	int		col;
-	int 	i;
+	int 	col;
+	char	array[104][104];
 
 	row = 0;
-	col = 0;
-	i = 0;
-	ptr = new;
-	arr[i] = '0';
-	while (*arr)
+	open(fd, av);
+	while (read(fd, &buf, 1)) //while buff != \n
 	{
-		col = 0;
-		if (*arr == '\n')
-			new = ptr;
-		while (i < 4)
-		{
-			(new->grid)[col][row] = *arr;
-			arr++;
-			i++;
-		}
-	}
-	return (ptr);
-}
+
+
